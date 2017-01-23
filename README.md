@@ -19,18 +19,22 @@ used techniques：<br/>
 ```
  cd Weipiao-WebApp directory
 ```
+
  cd server
 ```
  npm install
 ```
+
  cd ..(enter Weipiao-WebApp directory)
 ```
  npm install
 ```
+
 Start the server（back-end service first, or there will be no data in the front page)， in the server directory, execute the directive below. When success, the words 'port on 9090' will be printed on screen.
 ```
  npm run start
 ```
+
 Start the font-end service. When success, browser will access the dev-environment on `http://localhost:8080`
 ```
  npm run dev
