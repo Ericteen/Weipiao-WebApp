@@ -59,7 +59,7 @@ Start the font-end service. When success, browser will access the dev-environmen
 >  --views  <br/>
 >  --app.js  <br/>
 
-
-
+## License
+MIT
 	
 	
