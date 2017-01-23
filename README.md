@@ -17,8 +17,8 @@ used techniques：<br/>
 ```
  git clone git@github.com:Ericteen/Weipiao-WebApp.git
 ```
+
  cd Weipiao-WebApp directory
-```
 
  cd server
 ```
