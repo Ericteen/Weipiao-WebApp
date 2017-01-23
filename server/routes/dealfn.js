@@ -4,9 +4,9 @@ let fs = require('fs');
 let dealFn = {
 	/**
 	 * [通过Promise写入数据]
-	 * @param  {String} file [文件名]
-	 * @param  {Object} obj  [写入的数据（对象）]
-	 * @return {Object}      [Promise对象]
+	 * @param  {String} file [file name]
+	 * @param  {Object} obj  [wrote data(object)]
+	 * @return {Object}      [Promise Object]
 	 */
 	writeFileData: (file, obj) => {
 	    let promise = new Promise((resolve, reject) => {
@@ -24,9 +24,9 @@ let dealFn = {
 	},
 
 	/**
-	 * [通过Promise读取存储的数据]
-	 * @param  {String} file [文件名]
-	 * @return {Object}      [Promise对象]
+	 * [the stored data will be loaded by Promise]
+	 * @param  {String} file [file name]
+	 * @return {Object}      [Promise Object]
 	 */
 	readFileData: (file) => {
 	    let promise = new Promise((resolve, reject) => {
