@@ -2,7 +2,7 @@
 # a Weipiao Web App based on Vue.js+Vuex+Express.
 
 ## Description
-This is a web app demo based on Vue.js+Express full stack. The app is designed to query the movies on show recently. The demo is 
+This is a web app demo based on Vue.js+Express full stack. The app is designed to query the movies on show recently. 
 
 used techniques：<br/>
 - vue2.0
