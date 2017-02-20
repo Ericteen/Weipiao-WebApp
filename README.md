@@ -11,8 +11,12 @@ used techniques：<br/>
 - mint-ui
 - nodejs
 - express
+
+## Preview
+![Mou icon](./Screenshots/01.gif) ----------
+![Mou icon](./Screenshots/02.gif) 
 	
-## installation
+## Installation
 
 ```
  git clone git@github.com:Ericteen/Weipiao-WebApp.git
