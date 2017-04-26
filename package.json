@@ -1,8 +1,8 @@
 {
-  "name": "Weipiao-WebApp",
+  "name": "vue2.0-taopiaopiao",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "Ericteen https://github.com/Ericteen",
+  "author": "canfoo <178774618@qq.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",

@@ -72,7 +72,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
-//path will be replaced when the files are build
+//发布文件时自动替换一些路径处理
 let dealIndexTemplate = {
   changeNum: -1,
   directory: './views/',
@@ -81,7 +81,7 @@ let dealIndexTemplate = {
   dealContent: '',
   init: function() {
     fs.watch(this.directory, {
-        persistent: true, // session will not be blocked when set false
+        persistent: true, // 设为false时，不会阻塞进程。
         recursive: false
     }, (event, filename) => {
       ++this.changeNum;
@@ -112,7 +112,7 @@ let dealCssFile = {
   dealContent: '',
   init: function() {
     fs.watch(this.directory, {
-        persistent: true, // session will not be blocked when set false
+        persistent: true, // 设为false时，不会阻塞进程。
         recursive: false
     }, (event, filename) => {
       if (/\.css$/.test(filename)) {
