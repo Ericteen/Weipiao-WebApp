@@ -22,14 +22,14 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-        '/movie/coming': 'http://localhost:9090',
-        '/movie/hot': 'http://localhost:9090',
-        '/movie/info': 'http://localhost:9090',
-        '/movie/evaluation': 'http://localhost:9090',
-        '/movie/cinema': 'http://localhost:9090',
-        '/movie/cinema_detail': 'http://localhost:9090',
-        '/movie/swiper': 'http://localhost:9090',
-        '/movie/city': 'http://localhost:9090'
+        '/api/coming': 'http://localhost:9090',
+        '/api/hot': 'http://localhost:9090',
+        '/api/info': 'http://localhost:9090',
+        '/api/evaluation': 'http://localhost:9090',
+        '/api/cinema': 'http://localhost:9090',
+        '/api/cinema_detail': 'http://localhost:9090',
+        '/api/swiper': 'http://localhost:9090',
+        '/api/city': 'http://localhost:9090'
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README

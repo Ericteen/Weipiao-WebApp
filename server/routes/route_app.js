@@ -2,6 +2,9 @@
 let url = require('url');  
 let dealFn = require('./dealfn.js');
 
+let express = require('express')
+let router = express.Router()
+
 function sendDataFn(req, res, filename, needcity) {
     let query = url.parse(req.url, true).query,
         name = query.name || '',
@@ -28,11 +31,12 @@ function sendDataFn(req, res, filename, needcity) {
     })
 }
 
-exports.index = (req, res) => {
-    res.render('index');
-}
 
-exports.coming = (req, res, next) => {
+router.get('/app', (req, res) => {
+    res.render('index');
+})
+
+router.get('/coming', (req, res, next) => {
     let query = url.parse(req.url, true).query,
         limit = query.limit,
         offset = query.offset;
@@ -41,9 +45,9 @@ exports.coming = (req, res, next) => {
     } else {
         sendDataFn(req, res, 'coming.json', false);
     }
-}
+})
 
-exports.comingLimit = (req, res) => {
+router.get(/\/coming\/[\w\W]*/, (req, res) => {
     let query = url.parse(req.url, true).query,
         limit = +query.limit,
         offset = +query.offset,
@@ -67,32 +71,34 @@ exports.comingLimit = (req, res) => {
         sendData.msg = '暂时没有数据';
         res.send(JSON.stringify(sendData));
     })
-}
+})
 
-exports.cinema = (req, res) => {
+router.get('/cinema', (req, res) => {
     sendDataFn(req, res, '_cinema.json', true);
-}
+})
 
-exports.hot = (req, res) => {
+router.get('/hot', (req, res) => {
     sendDataFn(req, res, '_hot.json', true);
-}
+})
 
-exports.info = (req, res) => {
+router.get('/info', (req, res) => {
     sendDataFn(req, res, '_info.json', false);
-}
+})
 
-exports.evaluation = (req, res) => {
+router.get('/evaluation', (req, res) => {
     sendDataFn(req, res, '_evaluation.json', false);
-}
+})
 
-exports.swiper = (req, res) => {
+router.get('/swiper', (req, res) => {
     sendDataFn(req, res, 'swiper.json', false);
-}
+})
 
-exports.city = (req, res) => {
+router.get('/city', (req, res) => {
     sendDataFn(req, res, 'city.json', false);
-}
+})
 
-exports.cinema_detail = (req, res) => {
+router.get('/cinema_detail', (req, res) => {
     sendDataFn(req, res, 'cinema_detail.json', false);
-}
+})
+
+module.exports = router

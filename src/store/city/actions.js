@@ -8,7 +8,7 @@ export default {
   		city.name = state.name
   		city.rN = state.rN
   	}
-    return  Vue.http.get(`/movie/hot/?city=${city.rN}`).then((response) => {
+    return  Vue.http.get(`/api/hot/?city=${city.rN}`).then((response) => {
   		let data = JSON.parse(response.data)
       let lists = data.data.data.returnValue
       //模拟索引数据的id号

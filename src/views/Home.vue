@@ -141,12 +141,12 @@ export default{
   },
   created () {
     this.pushComingList({lists: []})
-    this.requestData('/movie/swiper', (response) => {
+    this.requestData('/api/swiper', (response) => {
       let data = JSON.parse(response.data)
       this.imgs = data.data.data.returnValue
     })
 
-    this.requestData(`/movie/coming/?limit=${this.limit}&offset=${this.offset}`, (response) => {
+    this.requestData(`/api/coming/?limit=${this.limit}&offset=${this.offset}`, (response) => {
       let data = JSON.parse(response.data)
       let lists = data.data.data.returnValue
       //模拟索引数据的id号

@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 let fs = require('fs');
 
-var routes = require('./routes/route_app');
+var router = require('./routes/route_app');
 
 var app = express();
 var ejs = require('ejs');
@@ -29,17 +29,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/app', routes.index);  
-app.get(/\/movie\/hot\//, routes.hot);
-app.get(/\/movie\/cinema\//, routes.cinema);
-app.get(/\/movie\/info\//, routes.info);
-app.get(/\/movie\/evaluation\//, routes.evaluation);
-app.get(/\/movie\/coming\//, routes.coming);
-app.get(/\/movie\/coming\/[\w\W]*/, routes.comingLimit);
 
-app.get('/movie/swiper', routes.swiper);
-app.get('/movie/city', routes.city);
-app.get('/movie/cinema_detail', routes.cinema_detail);
+app.use('/api', router)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
